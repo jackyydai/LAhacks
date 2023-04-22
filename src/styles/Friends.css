@@ -1,0 +1,13 @@
+body {
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #28010A;
+    color: white;
+}
+.post {
+    margin: auto;
+    margin-bottom: 20px;
+    border: 1px solid white;
+    height: 240px;
+    width: 480px;
+}
