@@ -1,3 +1,7 @@
+
+
+
+
 .task {
     width: 320px;
     height: 420px;
@@ -10,13 +14,29 @@
     border-right-style: hidden;
     border-left-style: hidden;
     border-bottom-style: hidden;
-    background-color: #ffffff;
+    /* background-color: rgba(255, 255, 255, 0.5); */
     border-radius: 25px;
     justify-content: center;
-    
-    
-    
 }
+.addtask {
+  width: 320px;
+  height: 420px;
+  border: 1px solid black;
+  background-image: url('../media/addtask.png');
+  background-size: 320px 420px;
+  display: flex;
+  align-items: center;
+  border-top-style: hidden;
+  border-right-style: hidden;
+  border-left-style: hidden;
+  border-bottom-style: hidden;
+  /* background-color: #ffffff; */
+  border-radius: 25px;
+  justify-content: center;
+  /* background-color: rgba(255, 255, 255, 0.5); */
+}
+
+
 .task p {
     padding: auto;
     margin: auto;
@@ -26,6 +46,30 @@
 .task:hover {
     background-color: rgb(183, 183, 183);
 }
+
+@keyframes party {
+  0% {
+    background-color: #FF4136;
+  }
+  25% {
+    background-color: #FFDC00;
+  }
+  50% {
+    background-color: #2ECC40;
+  }
+  75% {
+    background-color: #0074D9;
+  }
+  100% {
+    background-color: #F012BE;
+  }
+}
+
+.random
+{
+  animation: party 1s infinite;
+}
+
 
 .container {
     display: flex;
@@ -72,4 +116,37 @@ button {
   
   button:active {
     box-shadow: none;
+  }
+
+  .highlight-white {
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    font-size: 25px;
+  }
+
+  input {
+    border-radius: 10px;
+    /* background-color: #f2f2f2; */
+    /* border: 1px solid #000000; */
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+    padding: 5px;
+    font-size: 16px;
+    margin: 4px;
+  }
+
+  .title
+  {
+    font-size: 50px;
+  }
+
+  .date
+  {
+    font-size: 25px;
+  }
+
+
+  .brag
+  {
+    width: 300px;
+    height: 100px;
   }

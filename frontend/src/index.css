@@ -5,6 +5,9 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  /* background-image: url('/Users/jackydai/Desktop/LAhacks/frontend/src/media/cloudsbg.png');
+  background-size: 3000px;
+  background-repeat: no-repeat; */
 }
 
 code {

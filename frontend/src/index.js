@@ -17,7 +17,10 @@ import {
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
+
+  
   <div>
+    
     <React.StrictMode>
     <Router>
     <Routes>
@@ -37,8 +40,7 @@ root.render(
   <a href="./signup"> signup</a>
   <a>   </a>
   <a href="./login"> login.</a>
-  <a>   </a>
-  <a href="./taskmake"> task.</a>
+  
   </div>
   
 );

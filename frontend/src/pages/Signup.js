@@ -80,7 +80,7 @@ const SignUpScreen = () => {
 
       setForm({ username: "", password: "", password2: ""});
 
-     // navigate("/"); //TODO: change to editprofile
+     navigate("/login"); //TODO: change to editprofile
      // window.location.reload(); // this is so navbar fixes itself
       }
 

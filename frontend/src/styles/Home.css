@@ -13,3 +13,39 @@ body {
     background-color: #ffffff;
 
 }
+a {
+    color: black;
+    text-decoration: none;
+  }
+  
+  .party {
+    animation: party 1s infinite;
+  }
+  
+  @keyframes party {
+    0% {
+      background-color: #FF4136;
+    }
+    25% {
+      background-color: #FFDC00;
+    }
+    50% {
+      background-color: #2ECC40;
+    }
+    75% {
+      background-color: #0074D9;
+    }
+    100% {
+      background-color: #F012BE;
+    }
+  }
+
+  a:hover {
+    animation: party 1s infinite;
+    text-decoration: underline;
+  }
+
+  .points
+  {
+    font-size: 50px; /* Set the font size to 24 pixels */
+  }

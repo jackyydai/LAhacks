@@ -50,11 +50,9 @@ const LoginScreen = () => {
 
 
     // This method fetches the records from the database.
-    useEffect(() => {
+        useEffect(() => {
         async function getRecords() {
           const response = await fetch('http://localhost:4000/login');
-      
-        
           const records = await response.json();
           setRecords(records);
         }

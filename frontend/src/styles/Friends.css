@@ -10,6 +10,7 @@ body {
     border: 1px solid black;
     height: 480px;
     width: 360px;
+    
 }
 .post img {
     height: 350px;
@@ -27,4 +28,12 @@ body {
     grid-template-columns: repeat(3, 1fr);
     gap: 10px;
     grid-auto-rows: minmax(100px, auto);
+}
+
+.posts
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }

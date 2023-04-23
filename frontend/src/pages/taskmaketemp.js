@@ -1,9 +1,15 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router";
+import TimePicker from 'react-time-picker';
 
-// import '../styles/LogIn.css';
+import '../styles/Task.css';
+
 
 const SignUpScreen = () => {
+    const [time, setTime] = useState('12:00');
+    function handleChange(newTime) {
+      setTime(newTime);
+    }
     const [form, setForm] = useState({
         name: "",
         number: "",
@@ -55,21 +61,21 @@ const SignUpScreen = () => {
       
       
 
-      localStorage.setItem("SQ_name", form.name);
+      
     //   localStorage.setItem("_id", dataBase_id);
       
 
       setForm({ name: "", number: ""});
 
      // navigate("/"); //TODO: change to editprofile
-     // window.location.reload(); // this is so navbar fixes itself
+     window.location.reload(); // this is so navbar fixes itself
       }
 
     return (
         <body>
         <div>
-            <div className="title">S I D E Q U E S T.
-                <div className="login-text">make task</div>
+            <div class="highlight-white">
+                <div >CREATE TASK</div>
             </div>
             <form onSubmit={onSubmit}>
                 <input
@@ -85,10 +91,13 @@ const SignUpScreen = () => {
                      className= "input-bar" 
                      name="number" 
                      placeholder="number."
+                     type = "time"
                      value={form.number}
                      onChange={(e) => updateForm({ number: e.target.value })}
                      />
                 </div>
+                
+                {/* <input type="time" /> */}
                 <input className="button" type="submit" value="Submit."></input>
             </form>
 

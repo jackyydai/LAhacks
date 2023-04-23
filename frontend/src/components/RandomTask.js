@@ -40,7 +40,7 @@ const TaskComp = (props) => {
   async function addpoints()
   {
     var DBF_username = localStorage.getItem("DBF_username");
-    const points = 1;
+    const points = 2;
     const edit = {username: DBF_username, points};
     console.log(JSON.stringify(edit))
 
