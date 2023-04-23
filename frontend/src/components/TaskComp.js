@@ -1,0 +1,11 @@
+import '../styles/Task.css';
+
+export default function TaskComp() {
+    return (
+      <div className="task">
+          <p>do homework</p>
+      </div>
+    );
+}
+  
+  

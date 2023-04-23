@@ -1,0 +1,13 @@
+.task {
+    width: 320px;
+    height: 420px;
+    border: 1px solid black;
+    background-image: url('../media/acecard.png');
+    background-size: 320px 420px;
+    display: flex;
+    align-items: center;
+}
+.task p {
+    padding: auto;
+    margin: auto;
+}

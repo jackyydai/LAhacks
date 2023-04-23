@@ -5,6 +5,8 @@ import App from './pages/App';
 import Home from './pages/home.js';
 import Login from './pages/Login.js';
 import Signup from './pages/Signup';
+import Friends from './pages/Friends';
+import Task from './components/TaskComp';
 import reportWebVitals from './reportWebVitals';
 import {
   BrowserRouter as Router,
@@ -20,6 +22,8 @@ root.render(
       <Route exact path="/" element={<Home/>}/>
       <Route exact path="/login" element={<Login/>}/>
       <Route exact path="/signup" element={<Signup/>}/>
+      <Route exact path="/friends" element={<Friends/>}/>
+      <Route exact path="/task" element={<Task/>}/>
     </Routes>
     </Router>
   </React.StrictMode>
