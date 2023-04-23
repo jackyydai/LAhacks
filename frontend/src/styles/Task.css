@@ -12,6 +12,10 @@
     border-bottom-style: hidden;
     background-color: #ffffff;
     border-radius: 25px;
+    justify-content: center;
+    
+    
+    
 }
 .task p {
     padding: auto;
@@ -22,3 +26,50 @@
 .task:hover {
     background-color: rgb(183, 183, 183);
 }
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+
+/* #button {
+    font-family: 'Courier New', Courier, monospace;
+    width: auto;
+    text-align: center;
+    background-color: #212529;
+    font-size: 25px;
+    border-radius: 10px;
+    color: rgb(255, 255, 255);
+    border-color: hsl(210, 11%, 15%);
+    padding: 7px 7px 7px 10px;
+    margin: 5px;
+    
+} */
+button {
+    background-color: #444;
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    font-family: monospace;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    cursor: pointer;
+    outline: none;
+    transition: all 0.2s ease;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+    margin-bottom: 1rem;
+    image-rendering: crisp-edges;
+  }
+  
+  button:hover {
+    background-color: #777;
+  }
+  
+  button:active {
+    box-shadow: none;
+  }

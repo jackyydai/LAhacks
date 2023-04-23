@@ -1,5 +1,5 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
+import ReactDOM from 'react-dom';
 import './index.css';
 import App from './pages/App';
 import Home from './pages/home.js';
@@ -8,6 +8,7 @@ import Signup from './pages/Signup';
 import Friends from './pages/Friends';
 import Task from './components/TaskComp';
 import reportWebVitals from './reportWebVitals';
+import Taskmake from './pages/taskmaketemp';
 import {
   BrowserRouter as Router,
   Routes,
@@ -25,16 +26,19 @@ root.render(
       <Route exact path="/signup" element={<Signup/>}/>
       <Route exact path="/friends" element={<Friends/>}/>
       <Route exact path="/task" element={<Task/>}/>
+      <Route exact path="/taskmake" element={<Taskmake/>}/>
     </Routes>
     </Router>
   </React.StrictMode>
+  <a href="./"> home</a>
+  <a>   </a>
   <a href="./friends"> friends</a>
   <a>   </a>
   <a href="./signup"> signup</a>
   <a>   </a>
   <a href="./login"> login.</a>
   <a>   </a>
-  <a href="./task"> task.</a>
+  <a href="./taskmake"> task.</a>
   </div>
   
 );
