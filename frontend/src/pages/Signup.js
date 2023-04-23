@@ -31,17 +31,17 @@ const SignUpScreen = () => {
         alert("Please input a password. — S I D E Q U E S T");
         return;
       }
-      const check = await fetch(`http://localhost:4000/login`);
+    //   const check = await fetch(`http://localhost:4000/login`);
     
-      const usernamechecker = await check.json();
+    //   const usernamechecker = await check.json();
 
-      // no duplicate login
-      for(var login of usernamechecker) {
-        if(login.username == form.username) {
-            alert("This username has been taken. — S I D E Q U E S T");
-            return;
-        }
-      }
+    //   // no duplicate login
+    //   for(var login of usernamechecker) {
+    //     if(login.username == form.username) {
+    //         alert("This username has been taken. — S I D E Q U E S T");
+    //         return;
+    //     }
+    //   }
       
       var p1 = form.password;
       var p2 = form.password2;
@@ -51,7 +51,7 @@ const SignUpScreen = () => {
         return;
       }
       const newPerson = {username : form.username, password: p1};
-      
+      console.log(JSON.stringify(newPerson))
       await fetch("http://localhost:4000/login/add", {
           method: "POST",
           headers: {
@@ -71,42 +71,17 @@ const SignUpScreen = () => {
         name: "",
         friends: new Array(),
       }
-      await fetch("http://localhost:4000/profile/add", {
-          method: "POST",
-          headers: {
-          "Content-Type": "application/json",
-          },
-          body: JSON.stringify(newProfileInformation),
-      })
-      .catch(error => {
-          window.alert(error);
-          return;
-      });
-
-      const response = await fetch(`http://localhost:4000/profile/`);
-    
-      if (!response.ok) {
-          const message = `An error occurred: ${response.statusText}`;
-          window.alert(message);
-          return;
-      }
-      const records = await response.json();
-
-      var dataBase_id = -1;
-      for(var record of records) {
-        if(record.username === form.username) {
-            dataBase_id = record._id;
-        }
-    }
+      
+      
 
       localStorage.setItem("SQ_username", form.username);
-      localStorage.setItem("_id", dataBase_id);
+    //   localStorage.setItem("_id", dataBase_id);
       
 
       setForm({ username: "", password: "", password2: ""});
 
-      navigate("/"); //TODO: change to editprofile
-      window.location.reload(); // this is so navbar fixes itself
+     // navigate("/"); //TODO: change to editprofile
+     // window.location.reload(); // this is so navbar fixes itself
       }
 
     return (
