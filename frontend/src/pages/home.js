@@ -1,6 +1,7 @@
 import React from "react";
 import Task from "../components/TaskComp"
 import '../styles/Home.css';
+import SideQuestConmp from "../components/SideQuestComp";
 const HomeScreen = () => {
     return(
         <div>

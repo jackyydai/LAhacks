@@ -1,24 +1,24 @@
-
-
 const express = require("express");
-const randTaskRoute = express.Router();
-const dbo = require("../db/conn");
+const axios = require('axios');
 const { application } = require("express")
 application.use(express.json())
 const ObjectId = require("mongodb").ObjectId;
 
-tasksRoutes.route("getRandTask").get(function(req, res) {
+const randTaskRoute = express.Router();
+
+randTaskRoute.route("/getRandTask").get(function(req, res) {
     console.log("/GET RANDOM TASK");
-    let db_connect = dbo.getDb();
 
-    const axios = require('axios');
-
-    axios.get('http://www.boredapi.com/api/activity?participants=1')
+    axios.get('https://www.boredapi.com/api/activity?participants=1')
     .then(response => {
-        console.log(response.data.url);
-        console.log(response.data.explanation);
+        //console.log(response.data);
+        //console.log(response.data.activity);
+        res.send(response.data)
     })
     .catch(error => {
         console.log(error);
     });
 })
+
+
+module.exports = randTaskRoute;

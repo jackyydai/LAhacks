@@ -2,6 +2,7 @@ import logo from '../logo.svg';
 import Post from "./Post.jsx"
 import '../styles/Friends.css';
 import TaskComp from '../components/TaskComp';
+import SideQuestConmp from '../components/SideQuestComp';
 
 function Friends() {
   return (
@@ -10,6 +11,10 @@ function Friends() {
         <h1>S I D E Q U E S T</h1>
         <p>what are your fellow quest-ers up to?</p>
       </header>
+
+      
+      <SideQuestConmp />
+      <button>Press me!</button>
 
       <div class="wrapper">
         <Post />
