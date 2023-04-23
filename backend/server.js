@@ -45,8 +45,8 @@ app.post("/login/add", function(req, res){
 })
 
 app.get("/login", function(req, res) {
-    db.collection("users").find({}).toArray(function(err, result) {
+    db.collection("users").find().toArray(function(err, result) {
 	if (err) throw err;
-	res.json(result)
+	res.send(result)
     });
 });
