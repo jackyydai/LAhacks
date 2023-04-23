@@ -43,3 +43,10 @@ app.post("/login/add", function(req, res){
     addToDb(req.body, "users")
     res.send({status : 200});
 })
+
+app.get("/login", function(req, res) {
+    db.collection("users").find({}).toArray(function(err, result) {
+	if (err) throw err;
+	res.json(result)
+    });
+});
