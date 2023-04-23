@@ -2,7 +2,12 @@ import React from "react";
 
 const HomeScreen = () => {
     return(
-        <h2>Home</h2>
+        <div>
+            <h2>S I D E Q U E S T</h2>
+            
+        </div>
+        
+        
     )
 }
 
