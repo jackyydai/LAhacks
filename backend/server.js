@@ -1,7 +1,10 @@
-express = require("express");
+const express = require("express");
 const cookieParser = require("cookie-parser");
 const app = express();
 const cors = require("cors");
+
+app.use(express.json())
+app.use(require("./routes/randTask")); 
 
 require("dotenv").config({ path: "./config.env" });
 
