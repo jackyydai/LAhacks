@@ -1,0 +1,15 @@
+body {
+    margin: 10px;
+    /* display:inline-block */
+}
+
+.tasks{
+    display: flex;
+    padding: 25px;
+    justify-content: space-evenly;
+    border-top-style: hidden;
+    border-right-style: hidden;
+    border-left-style: hidden;
+    background-color: #ffffff;
+
+}
