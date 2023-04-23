@@ -21,9 +21,4 @@ tasksRoutes.route("getRandTask").get(function(req, res) {
     .catch(error => {
         console.log(error);
     });
-
-    db_connect.collection("test").find({}).toArray(function (err, result) {
-      if (err) throw err;
-      res.json(result);
-    });
 })
