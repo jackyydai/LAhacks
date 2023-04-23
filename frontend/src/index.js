@@ -16,7 +16,8 @@ import {
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
+  <div>
+    <React.StrictMode>
     <Router>
     <Routes>
       <Route exact path="/" element={<Home/>}/>
@@ -27,6 +28,15 @@ root.render(
     </Routes>
     </Router>
   </React.StrictMode>
+  <a href="./friends"> friends</a>
+  <a>   </a>
+  <a href="./signup"> signup</a>
+  <a>   </a>
+  <a href="./login"> login.</a>
+  <a>   </a>
+  <a href="./task"> task.</a>
+  </div>
+  
 );
 
 // If you want to start measuring performance in your app, pass a function
