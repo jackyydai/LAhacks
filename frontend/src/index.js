@@ -3,6 +3,8 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './pages/App';
 import Home from './pages/home.js';
+import Login from './pages/Login.js';
+import Signup from './pages/Signup';
 import reportWebVitals from './reportWebVitals';
 import {
   BrowserRouter as Router,
@@ -16,6 +18,8 @@ root.render(
     <Router>
     <Routes>
       <Route exact path="/" element={<Home/>}/>
+      <Route exact path="/login" element={<Login/>}/>
+      <Route exact path="/signup" element={<Signup/>}/>
     </Routes>
     </Router>
   </React.StrictMode>
