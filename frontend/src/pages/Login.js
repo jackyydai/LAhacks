@@ -7,8 +7,7 @@ const LoginScreen = () => {
     const [records, setRecords] = useState([]);
     const navigate = useNavigate();
     // var sha1 = require('sha1');
-// 
-
+ 
     // creates temp form
     const [form, setForm] = useState({
         username: "",

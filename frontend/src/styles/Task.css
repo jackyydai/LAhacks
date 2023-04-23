@@ -6,8 +6,14 @@
     background-size: 320px 420px;
     display: flex;
     align-items: center;
+    border-top-style: hidden;
+    border-right-style: hidden;
+    border-left-style: hidden;
+    border-bottom-style: hidden;
+    background-color: #ffffff;
 }
 .task p {
     padding: auto;
     margin: auto;
+    
 }
