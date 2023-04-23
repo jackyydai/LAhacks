@@ -11,6 +11,7 @@
     border-left-style: hidden;
     border-bottom-style: hidden;
     background-color: #ffffff;
+    border-radius: 25px;
 }
 .task p {
     padding: auto;
