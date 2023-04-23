@@ -1,0 +1,17 @@
+//express
+const express = require("express");
+const tasksRoutes = express.Router();
+const dbo = require("../db/conn");
+const { application } = require("express")
+application.use(express.json())
+const ObjectId = require("mongodb").ObjectId;
+
+tasksRoutes.route("/tasks").get(function (req, res) {
+    console.log("GET /tasks")
+    let db_connect = dbo.getDb();
+    db_connect.collection("test").find({}).toArray(function (err, result) {
+      if (err) throw err;
+      res.json(result);
+    });
+});
+
