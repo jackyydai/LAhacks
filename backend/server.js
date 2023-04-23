@@ -26,3 +26,27 @@ const { MinKey } = require("mongodb");
 app.listen(port, () => {
   console.log(`Server is running on port: ${port}`);
 });
+
+
+function addToDb(item, col) {
+  var tempdb = db.collection(col);
+  tempdb.insertOne(item, function (err, res) {
+    if (err) console.log(err);
+  });
+}
+
+function getFromDb(item, col, process) {
+    db.collection(col).find(item).toArray().then(process);
+}
+
+app.post("/login/add", function(req, res){
+    addToDb(req.body, "users")
+    res.send({status : 200});
+})
+
+app.get("/login", function(req, res) {
+    db.collection("users").find({}).toArray(function(err, result) {
+	if (err) throw err;
+	res.json(result)
+    });
+});
