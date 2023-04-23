@@ -43,6 +43,7 @@ function getFromDb(item, col, process) {
 }
 
 app.post("/login/add", function(req, res){
+    req.body["tasks"] = []
     addToDb(req.body, "users")
     res.send({status : 200});
 })
@@ -52,4 +53,39 @@ app.get("/login", function(req, res) {
 	if (err) throw err;
 	res.send(result)
     });
+});
+
+app.post("/task/add", function(req, res) {
+    var usr = req.body.username
+    db.collection("users").find({}).toArray(function(err, result) {
+	var lst = []
+	for (const user of result) {
+	    console.log(user)
+	    if (user.username === usr) {
+		lst = user["tasks"]
+		lst.push(req.body.task)
+	    }
+	}
+	console.log(req.body.task)
+	console.log(lst)
+	myquery = {"username" : usr}
+	newvalues = { $set: {"tasks" : lst}}
+	db.collection("users").updateOne(myquery, newvalues, function(err, res) {
+	    if (err) throw err;
+	    console.log("1 document updated");
+	});
+	res.send({status : 200})
+    });					    
+});
+
+app.get("/task/get", function(req, res) {
+    var usr = req.body.username
+    db.collection("users").find({}).toArray(function(err, result) {
+	for (const user of result) {
+	    if (user.username == usr) {
+		res.send(user["tasks"])
+		return;
+	    }
+	}
+    });   
 });
