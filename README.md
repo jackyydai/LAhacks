@@ -1,4 +1,4 @@
-# LAHACKS
+# SIDEQUEST- LAHACKS 2023
 # Inspiration
 Boredom. Something that every student experiences. While it's important to focus, sometimes, we could all use a break. But what should you do in your break? Surely you don't want to just scroll Youtube or Tiktok, right? SideQuest aims to answer that question, by giving students healthy, life-balancing side quests to help them achieve both academic and personal life success at the same time.
 
